@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "check": "node --check game.js && node --check app.js && node --check tests/game.test.js",
+    "check": "node --check game.js && node --check app.js && node --check tests/game.test.js && node --check snake/game.js && node --check snake/app.js && node --check tests/snake.test.js && node --check shooter/game.js && node --check shooter/app.js && node --check tests/shooter.test.js",
     "test": "node --test tests/*.test.js",
     "push:game": "sh scripts/push-game.sh"
   },

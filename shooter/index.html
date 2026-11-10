@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10151f">
+  <title>打飞机 · SKY PATROL</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="game.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <nav><a href="../index.html">↖ 1024</a><a href="../snake/index.html">贪吃蛇 ↗</a><span>ARCADE / 003</span></nav>
+    <header><div><p class="eyebrow"><i></i> CLEAR FOR TAKEOFF</p><h1>打飞机<span>SKY PATROL</span></h1></div><div class="record">历史最高<output id="best">0</output></div></header>
+    <section class="hud" aria-label="飞行状态"><div>得分<output id="score">000000</output></div><div>波次<output id="wave">01</output></div><div>装甲<output id="lives" aria-label="剩余 3 格生命">▰ ▰ ▰</output></div></section>
+    <div class="arena">
+      <canvas id="board" width="480" height="680" tabindex="0" role="img" aria-label="打飞机战场，用方向键或 WASD 移动，自动射击" aria-describedby="instructions">你的浏览器需要支持 Canvas 才能游玩。</canvas>
+      <section id="overlay" aria-labelledby="overlay-title"><div class="emblem" aria-hidden="true">✦</div><p class="call-sign">CALL SIGN / FALCON</p><h2 id="overlay-title">空域，交给你了。</h2><p id="overlay-text">驾驶战机，避开弹幕，击落来袭敌机。</p><button id="start" type="button">开始飞行 →</button><p class="hint">自动开火 · 三格装甲 · 无限挑战</p></section>
+      <span id="flight-status" class="flight-status">STANDBY</span>
+    </div>
+    <div class="actions"><button id="pause" class="secondary" type="button" disabled>暂停 <kbd>SPACE</kbd></button><button id="restart" class="secondary" type="button">重新出发 ↻</button></div>
+    <div class="direction-pad" aria-label="移动控制"><button type="button" data-direction="up" class="up" aria-label="向上移动">↑</button><button type="button" data-direction="left" aria-label="向左移动">←</button><button type="button" data-direction="down" aria-label="向下移动">↓</button><button type="button" data-direction="right" aria-label="向右移动">→</button></div>
+    <p id="instructions"><strong>移动，瞄准，保持飞行。</strong><br>方向键 / WASD 移动，手机拖动战机或按住方向按钮。自动射击，空格暂停；普通敌机 +100 分，重型敌机 +300 分。每 20 秒提升波次，装甲耗尽后结束。</p>
+    <p id="announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    <footer><span>保持冷静，下一波即将到来。</span><span>FLY. DODGE. REPEAT.</span></footer>
+  </main>
+</body>
+</html>
