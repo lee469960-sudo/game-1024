@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1024 · 数字合并</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="game.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">SMALL MOVES. BIG NUMBERS.</p>
+    <header><h1>1024<span>.</span></h1><div class="score">当前得分<output id="score">0</output></div></header>
+    <div class="intro"><p>合并相同数字，<br>一步步接近 <strong>1024</strong>。</p><button id="restart" type="button">重新开始 ↻</button></div>
+    <div class="board-wrap">
+      <div id="board" role="group" aria-label="4 行 4 列数字棋盘" aria-describedby="instructions" tabindex="0"></div>
+      <section id="result" hidden aria-labelledby="result-title">
+        <h2 id="result-title"></h2><p id="result-description"></p>
+        <button id="again" type="button">再玩一局</button>
+      </section>
+    </div>
+    <p id="announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    <p class="caption">4 × 4 · 每一步都算数</p>
+    <p id="instructions">电脑使用方向键 ← ↑ ↓ →，手机在棋盘上滑动。相同数字碰撞时合并；只有有效移动才会生成新数字。</p>
+    <footer>慢慢来，好的一步值得思考。 <a href="snake/index.html">贪吃蛇</a> · <a href="shooter/index.html">打飞机 →</a></footer>
+  </main>
+</body>
+</html>
