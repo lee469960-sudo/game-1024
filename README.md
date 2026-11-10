@@ -35,3 +35,16 @@ git push git@github.com:lee469960-sudo/game-1024.git game-1024-mvp:refs/heads/ga
 ```
 
 上述命令只更新游戏分支，不会合并到 `main` 或发布网站。
+
+### 确认是否已同步
+
+推送返回 `Everything up-to-date` 表示目标分支已经包含本地提交，并非推送失败。推送本身不修改源码，因此没有源码差异是正常结果，无需创建空提交或重复修改游戏。
+
+可以比较以下两条命令输出的完整提交哈希；一致即表示该分支已同步：
+
+```sh
+git rev-parse game-1024-mvp
+git ls-remote git@github.com:lee469960-sudo/game-1024.git refs/heads/game-1024-mvp
+```
+
+若 GitHub 默认页面只有 README，请选择上方链接中的 `game-1024-mvp` 分支查看完整游戏；推送该分支不会自动更新 `main`。
