@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "check": "node --check game.js && node --check app.js && node --check tests/game.test.js",
-    "test": "node --test tests/*.test.js"
+    "test": "node --test tests/*.test.js",
+    "push:game": "sh scripts/push-game.sh"
   },
   "engines": { "node": ">=18" }
 }
